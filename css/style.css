@@ -749,6 +749,7 @@ a.link.current{
 
 .modal {
     position: absolute;
+    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -762,7 +763,21 @@ a.link.current{
     0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-    
+}
 
+.close {
+
+    cursor: pointer;
+    fill: #000000;
+    border: none;
     
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+.button.close {
+    display: block;
+    margin-left: auto;
+    margin-top: 8px;
+    margin-right: 8px;
 }
