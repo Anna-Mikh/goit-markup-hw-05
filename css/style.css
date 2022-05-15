@@ -198,7 +198,7 @@ a.link.current{
     letter-spacing: 0.02em;
     display: block;
     
-    transition: color 250ms, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-title .link:hover,
@@ -216,7 +216,7 @@ a.link.current{
     padding-bottom: 32px;
     color: var(--primery-text-color);
     text-decoration: none;
-    transition: color 250ms, fill 250ms, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -403,7 +403,7 @@ a.link.current{
 .networks-list-link {
     background-color: var(--accent-color);
     border-radius: 50%;
-    transition: background-color 250ms, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .networks-list-link:hover,
@@ -412,15 +412,8 @@ a.link.current{
 }
 
 .link-icon {
-    display: inline-flex;
     fill: rgba(175, 177, 184, 1);
-    cursor: pointer;
-    padding: 0;
-    border: none;
-
-    background-size: contain;
-    background-position: 50% 50%;
-    transition: fill 250ms, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .networks-list-link:hover .link-icon,
@@ -458,7 +451,7 @@ a.link.current{
 
 .client-iton {
     width: 170px;
-    height: 120px;
+    height: 90px;
 }
 
 .client-iton:not(:last-child) {
@@ -478,7 +471,7 @@ a.link.current{
     justify-content: center;
     border: 1px solid rgba(175, 177, 184, 1);
     fill: #AFB1B8;
-    transition: fill 250ms, border 250ms, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon:hover,
@@ -597,7 +590,7 @@ a.link.current{
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 
-    transition: background-color 250ms, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-networks-link:hover,
@@ -644,7 +637,7 @@ a.link.current{
     border-radius: 4px;
     border: solid transparent;
 
-    transition: color 250ms, background-color 250ms, box-shadow 250ms, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-portfolio .portfolio-button:hover,
 .main-portfolio .portfolio-button:focus {
@@ -674,8 +667,7 @@ a.link.current{
     display: block;
     text-decoration: none;
 
-    transition: box-shadow 250ms, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition: box-shadow 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .effects:hover,
@@ -707,13 +699,10 @@ a.link.current{
     padding: 20px 24px;
 }
 
-
 .depart {
     position: relative;
     overflow: hidden;
 }
-
-
 
 .masters-top-text {
     position: absolute;
@@ -729,7 +718,8 @@ a.link.current{
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.effects:hover .masters-top-text {
+.effects:hover .masters-top-text,
+.effects:focus .masters-top-text {
     transform: translateY(0%)
 }
 
@@ -740,10 +730,12 @@ a.link.current{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
 }
 
@@ -766,7 +758,6 @@ a.link.current{
 }
 
 .close {
-
     cursor: pointer;
     fill: #000000;
     border: none;
@@ -776,8 +767,7 @@ a.link.current{
 }
 
 .button.close {
-    display: block;
-    margin-left: auto;
-    margin-top: 8px;
-    margin-right: 8px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
 }
